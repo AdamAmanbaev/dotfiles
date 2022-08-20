@@ -10,7 +10,7 @@ imap jk <ESC>
 " Select all with "Ctrl + a"
 map <C-a> <ESC>ggVG<CR>
 
-" Compilation of cpp-files using build.sh
+" Compilation of cpp-files using build.zsh
 set makeprg=$HOME/Code/dotfiles/zsh/build.zsh\ %:r
 autocmd filetype cpp nnoremap <F9> :w <bar> Make <CR> 
 autocmd filetype cpp nnoremap <F10> :vertical terminal ++shell ++cols=40 ./%:r<CR>
