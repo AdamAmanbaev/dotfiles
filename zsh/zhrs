@@ -1,4 +1,4 @@
-DOTFILES=$HOME/Code/dotfiles
+DOTFILES=$HOME/dotfiles
 ZSHFILES=$DOTFILES/zsh
 
 source $ZSHFILES/directories.zsh
