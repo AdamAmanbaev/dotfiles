@@ -4,11 +4,11 @@ sudo apt-get update
 
 if want_basic
 then
-    BASIC_PACKAGES=(vim git zsh curl)
+    BASIC_PACKAGES=(vim python3 python3-pip git zsh curl)
     echo "Installing basic packages ($BASIC_PACKAGES)"
     sudo apt-get install $BASIC_PACKAGES
 fi
-
+ 
 if want_dev
 then
     DEV_PACKAGES=(g++ gcc cmake neofetch lolcat)
@@ -16,15 +16,3 @@ then
     sudo apt-get install $DEV_PACKAGES
 fi
 
-if want_home
-then
-    HOME_PACKAGES=()
-    echo "Installing home packages ($HOME_PACKAGES)"
-    sudo apt-get install $HOME_PACKAGES
-    echo "Installing bazel"
-    echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
-    curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
-    sudo apt-get update
-    sudo apt-get install bazel
-    sudo apt-get upgrade bazel
-fi
