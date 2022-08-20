@@ -21,7 +21,7 @@ autocmd filetype cpp nnoremap <C-C> :s/^\(\s*\)/\1\/\/<CR> :s/^\(\s*\)\/\/\/\//\
 
 " Use , as leader
 let mapleader=","
-let g:mapleader","
+let g:mapleader=","
 
 " Use Ctrl+L to clear highlighting
 map <C-l> :noh<cr>
