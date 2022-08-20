@@ -4,7 +4,7 @@ mkdir -p $HOME/Code/tmp
 
 if cd $HOME/Code/dotfiles
 then
-    git pull origin
+    git pull origin master
 else
     git clone git@github.com:AdamAmanbaev/dotfiles.git $HOME/Code/dotfiles
 fi
