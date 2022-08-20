@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 for ((testNum=0;testNum<$4;testNum++)) 
 do 
 	./$3 > input
@@ -20,7 +18,3 @@ do
 	fi
 done 
 echo Passed $4 tests
-
-
-
-
