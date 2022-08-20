@@ -2,7 +2,7 @@
 set -e
 INSTALL_PATH=$(dirname -- "$0:A")
 PROFILES=(basic work home)
-MODULES=(packages home ssh vim contest)
+MODULES=(ssh packages home vim contest)
 
 if [[ -z $1 ]]
 then
