@@ -8,5 +8,5 @@ sudo usermod -aG sudo <username>
 " new tab
 
 mkdir $HOME/Code
-git clone git@github.com:AdamAmanbaev/dotfiles $HOME/Code/dotfiles
+git clone https://github.com/AdamAmanbaev/dotfiles.git $HOME/Code/dotfiles
 ```
