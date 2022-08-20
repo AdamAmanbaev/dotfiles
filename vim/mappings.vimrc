@@ -10,6 +10,15 @@ imap jk <ESC>
 " Select all with "Ctrl + a"
 map <C-a> <ESC>ggVG<CR>
 
+" Compilation of cpp-files using build.sh
+set makeprg=build.sh\ %:r
+autocmd filetype cpp nnoremap <F9> :w <bar> Make <CR> 
+autocmd filetype cpp nnoremap <F10> :vertical terminal ++shell ++cols=40 ./%:r<CR>
+autocmd filetype cpp nnoremap <F12> :!./%:r<CR>
+
+" Comment current line in normal-mode
+autocmd filetype cpp nnoremap <C-C> :s/^\(\s*\)/\1\/\/<CR> :s/^\(\s*\)\/\/\/\//\1<CR> $
+
 " Use , as leader
 let mapleader=","
 let g:mapleader","
@@ -26,4 +35,3 @@ map <leader>tx :tabclose<cr>
 map <leader>tn :tabnext<cr>
 " ,tp for last tab
 map <leader>tp :tabprevious<cr>
-
