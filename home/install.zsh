@@ -6,7 +6,7 @@ if cd $HOME/Code/dotfiles
 then
     git pull origin
 else
-    git clone https://github.com/AdamAmanbaev/dotfiles.git $HOME/Code/dotfiles
+    git clone git@github.com:AdamAmanbaev/dotfiles.git $HOME/Code/dotfiles
 fi
 
 git config --global user.email "adam.amanbaev@gmail.com"
