@@ -7,9 +7,8 @@ sudo usermod -aG sudo <username>
 " add "su - <username>" to .bashrc
 " new tab
 
-mkdir $HOME/Code
-git clone git@github.com:AdamAmanbaev/dotfiles.git $HOME/Code/dotfiles
+git clone git@github.com:AdamAmanbaev/dotfiles.git $HOME/dotfiles
 
-chmod +x $HOME/Code/dotfiles/setup/install.zsh
-$HOME/Code/dotfiles/setup/install.zsh
+chmod +x $HOME/dotfiles/setup/install.zsh
+$HOME/dotfiles/setup/install.zsh
 ```
