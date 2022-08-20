@@ -11,14 +11,14 @@ fi
 
 if want_dev
 then
-    DEV_PACKAGES=(g++ gcc cmake )
+    DEV_PACKAGES=(g++ gcc cmake neofetch lolcat)
     echo "Installing dev packages ($DEV_PACKAGES)"
     sudo apt-get install $DEV_PACKAGES
 fi
 
 if want_home
 then
-    HOME_PACKAGES=(google-chrome-stable ghostscript)
+    HOME_PACKAGES=()
     echo "Installing home packages ($HOME_PACKAGES)"
     sudo apt-get install $HOME_PACKAGES
     echo "Installing bazel"
