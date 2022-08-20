@@ -10,5 +10,7 @@ fi
 
 vim +PluginInstall +qall
 
+git clone https://github.com/mh21/errormarker.vim $HOME/.vim/bundle/errormarker.vim
+
 mkdir -p ~/.vim/autoload && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
