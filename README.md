@@ -2,10 +2,9 @@
 
 ```
 sudo apt install vim git zsh
-sudo adduser adamamanbaev
-sudo usermod -aG sudo adamamanbaev
+sudo usermod -aG sudo <username>
 
-" add "su - adamamanbaev" to .bashrc
+" add "su - <username>" to .bashrc
 " new tab
 
 mkdir $HOME/Code
