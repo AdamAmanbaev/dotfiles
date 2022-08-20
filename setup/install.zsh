@@ -1,7 +1,7 @@
 #!/usr/bin/zsh
 set -e
 INSTALL_PATH=$(dirname -- "$0:A")
-PROFILES=(basic work home)
+PROFILES=(basic dev)
 MODULES=(packages home ssh vim contest)
 
 if [[ -z $1 ]]
@@ -38,16 +38,12 @@ then
     MODULES=($MODULE)
 fi
 
-function want_home() {
-    [[ $PROFILE == "home" ]]
-}
-
-function want_work() {
-    [[ $PROFILE == "work" || want_home ]]
+function want_dev() {
+    [[ $PROFILE == "dev" ]]
 }
 
 function want_basic() {
-    [[ $PROFILE == "basic" || want_work ]]
+    [[ $PROFILE == "basic" || want_dev ]]
 }
 
 TODOS=()
