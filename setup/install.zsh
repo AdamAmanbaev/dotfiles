@@ -40,6 +40,7 @@ fi
 
 function want_home() {
     [[ $PROFILE == "home" ]] 
+}
 
 function want_dev() {
     [[ $PROFILE == "dev" || want_home ]]
