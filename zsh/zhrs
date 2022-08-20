@@ -6,3 +6,5 @@ source $ZSHFILES/history.zsh
 source $ZSHFILES/git.zsh
 source $ZSHFILES/history.zsh
 source $ZSHFILES/paths.szh
+
+exec bash
