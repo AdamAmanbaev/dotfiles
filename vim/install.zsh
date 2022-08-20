@@ -8,9 +8,9 @@ else
     git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 fi
 
+mkdir -p ~/.vim/autoload && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
 vim +PluginInstall +qall
 
 git clone https://github.com/mh21/errormarker.vim $HOME/.vim/bundle/errormarker.vim
-
-mkdir -p ~/.vim/autoload && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
