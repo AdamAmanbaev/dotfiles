@@ -10,6 +10,6 @@ sudo usermod -aG sudo <username>
 mkdir $HOME/Code
 git clone https://github.com/AdamAmanbaev/dotfiles.git $HOME/Code/dotfiles
 
-cmod +x install.zsh
+chmod +x install.zsh
 $HOME/Code/dotfiles/setup/install.zsh
 ```
