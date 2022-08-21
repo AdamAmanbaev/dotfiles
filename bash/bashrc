@@ -1,0 +1,6 @@
+DOTFILES=$HOME/Code/dotfiles
+BASHFILES=$DOTFILES/bash
+
+source $BASHFILES/editor.sh
+
+neofetch --ascii_distro arch linux | lolcat
