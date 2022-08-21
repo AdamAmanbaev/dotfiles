@@ -5,7 +5,7 @@ source $ZSHFILES/directories.zsh
 source $ZSHFILES/history.zsh
 source $ZSHFILES/git.zsh
 source $ZSHFILES/history.zsh
-source $ZSHFILES/paths.szh
+source $ZSHFILES/paths.zsh
 
 autoload -U colors && colors
 autoload -U promptinit && promptinit
