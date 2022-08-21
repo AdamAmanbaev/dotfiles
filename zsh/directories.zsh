@@ -12,3 +12,6 @@ function mkcd() {
         mkdir -p $1
         cd $1
 }
+
+# delete current user and all files in home/$USER
+alias erasesys='source $HOME/Code/dotfiles/zsh/erasesys.zsh'
