@@ -17,48 +17,20 @@ do
     read PROFILE\?"What profile is this machine [$PROFILES]? "
 done
 
-if [[ -z $2 ]]
-then
-    MODULE="invalid"
-else
-    MODULE=$2
-fi
+echo "Write a space-separated list of the modules [$MODULES] you would like to install or nothing for all"
+read -a MODULE;
 
-while [[ ${MODULES[(r)$MODULE]} != $MODULE && $MODULE != "all" ]]
-do
-    read MODULE\?"What module should be installed [$MODULES, all*]? "
-done
-
-if [[ $MODULE == "all" ]]
-then
-    MODULE=""
-fi
-
-if [[ ! -z $MODULE ]]
-then
-    MODULES=($MODULE)
-fi
-
-if [[ -z $3 ]] 
+if [ ${#MODULE[@]} -gt 0 ] 
 then 
-    REPO="invalid"
-else 
-    REPO=$3
-fi 
-
-while [[ ${REPOS[(r)$REPOS]} != $REPO && $REPOS != "all" ]]
-do 
-    read REPO\?"What repository should be installed [$REPOS, all*]? "
-done
-
-if [[ $REPO == "all" ]] 
-then   
-    REPO=""
+    MODULES=("${MODULE[@]}")
 fi
 
-if [[ ! -z $REPO ]] 
+echo "Write a space-separated list of the repositories [$REPOS] you would like to install or nothing for all"
+read -a REPO;
+
+if [ ${#REPO[@]} -gt 0 ]
 then 
-    REPOS=($REPO)
+    REPOS=("${REPO[@]}")
 fi
 
 function want_home() {
