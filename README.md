@@ -13,10 +13,10 @@ ssh-keygen -t ed25519 -C <github e-mail>
 mkdir $HOME/Code
 git clone git@github.com:AdamAmanbaev/dotfiles.git $HOME/Code/dotfiles
 
-chmod +x $HOME/dotfiles/setup/install.zsh
-$HOME/dotfiles/setup/install.zsh
+chmod +x $HOME/Code/dotfiles/setup/install.zsh
+$HOME/Code/dotfiles/setup/install.zsh
 
-chmod +x $HOME/dotfiles/zsh/build.zsh
-chmod +x $HOME/dotfiles/zsh/validate.zsh
-chmod +x $HOME/dotfiles/zsh/stress.zsh
+chmod +x $HOME/Code/dotfiles/zsh/build.zsh
+chmod +x $HOME/Code/dotfiles/zsh/validate.zsh
+chmod +x $HOME/Code/dotfiles/zsh/stress.zsh
 ```
