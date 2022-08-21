@@ -15,5 +15,3 @@ setopt prompt_subst
 PROMPT="%{$fg[magenta]%}%n%{$reset_color%}@%{$fg[yellow]%}%m%{$reset_color%}:%~ "
 
 exec bash
-
-neofetch --ascii_distro arch linux | lolcat
