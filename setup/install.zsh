@@ -18,7 +18,7 @@ do
 done
 
 echo "Write a space-separated list of the modules [$MODULES] you would like to install or nothing for all"
-read -a MODULE;
+read -a MODULE
 
 if [ ${#MODULE[@]} -gt 0 ] 
 then 
@@ -26,7 +26,7 @@ then
 fi
 
 echo "Write a space-separated list of the repositories [$REPOS] you would like to install or nothing for all"
-read -a REPO;
+read -a REPO
 
 if [ ${#REPO[@]} -gt 0 ]
 then 
