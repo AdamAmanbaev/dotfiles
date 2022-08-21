@@ -1,7 +1,7 @@
 while true; do
     read -p "Do you wish to erase system and user [Y/n]? " yn
     case $yn in
-        [Yy]* ) make install; break;;
+        [Yy]* ) break;;
         [Nn]* ) exit;;
         * ) echo "Please answer yes or no.";;
     esac
