@@ -38,9 +38,6 @@ endtry
 " Increase the edit history 
 set history=500
 
-" Allow backspace to work over e.g. autoindents
-set backspace=eol,start,indent
-
 " Reload files when changed outside
 set autoread
 
