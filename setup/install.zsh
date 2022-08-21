@@ -3,6 +3,7 @@ set -e
 INSTALL_PATH=$(dirname -- "$0:A")
 PROFILES=(basic dev home)
 MODULES=(packages home zsh vim bash contest)
+REPOS=(gymnasiearbete cp-solutions kactl)
 
 if [[ -z $1 ]]
 then
@@ -38,6 +39,28 @@ then
     MODULES=($MODULE)
 fi
 
+if [[ -z $3 ]] 
+then 
+    REPO="invalid"
+else 
+    REPO=$3
+fi 
+
+while [[ ${REPOS[(r)$REPOS]} != $REPO && $REPOS != "all" ]]
+do 
+    read REPO\?"What repository should be installed [$REPOS, all*]? "
+done
+
+if [[ $REPO == "all" ]] 
+then   
+    REPO=""
+fi
+
+if [[ ! -z $REPO ]] 
+then 
+    REPOS=($REPO)
+fi
+
 function want_home() {
     [[ $PROFILE == "home" ]] 
 }
@@ -65,6 +88,9 @@ for module in $MODULES
 do
     install $module
 done
+
+echo "Installing [$REPOS]"
+source $INSTALL_PATH/../repos/install.zsh
 
 echo "Installation done! Todo list:"
 for todo in $TODOS
