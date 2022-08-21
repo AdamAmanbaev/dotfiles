@@ -11,10 +11,6 @@ augroup numbertoggle
     autocmd BufLeave,FocusLost,InsertEnter * set nornu
 augroup END
 
-" Custom status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
-set laststatus=2 " Always show status line
-
 " Do not use bells on errors
 set noerrorbells
 set novisualbell
