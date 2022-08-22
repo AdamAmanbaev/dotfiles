@@ -20,16 +20,20 @@ done
 echo "Write a space-separated list of the modules [$MODULES] you would like to install or nothing for all"
 read -A MODULE
 
-if [ ${#MODULE[@]} -gt 0 ] 
-then 
+if [ ${#MODULE[@]} -gt 0 ]
+then
+    echo "Installing all modules"
+else
     MODULES=("${MODULE[@]}")
 fi
 
 echo "Write a space-separated list of the repositories [$REPOS] you would like to install or nothing for all"
 read -A REPO
 
-if [ ${#REPO[@]} -gt 0 ]
+if [ ! ${#REPO[@]} -gt 0 ]
 then 
+    echo "Installing all repositories"
+else
     REPOS=("${REPO[@]}")
 fi
 
