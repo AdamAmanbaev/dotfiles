@@ -30,7 +30,7 @@ fi
 echo "Write a space-separated list of the repositories [$REPOS] you would like to install or nothing for all"
 read -A REPO
 
-if [ ! ${#REPO[@]} -gt 0 ]
+if [ ${#REPO[@]} -gt 0 ]
 then 
     echo "Installing all repositories"
 else
