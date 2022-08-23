@@ -20,20 +20,20 @@ done
 echo "Write a space-separated list of the modules [$MODULES] you would like to install or nothing for all"
 read -A MODULE
 
-if (( ${#MODULE[@]} ))
-then 
+if [ ${#MODULE[@]} -gt 0 ]
+then
+    echo "Installing all modules"
+else
     MODULES=("${MODULE[@]}")
-else 
-    echo "Installing all modules!"
 fi
 
 echo "Write a space-separated list of the repositories [$REPOS] you would like to install or nothing for all"
 read -A REPO
 
-if [ ${#REPO[@]} -eq 0 ]
+if [ ${#REPO[@]} -gt 0 ]
 then 
-    echo "Installing all repositories!"
-else 
+    echo "Installing all repositories"
+else
     REPOS=("${REPO[@]}")
 fi
 
@@ -67,8 +67,6 @@ done
 
 echo "Installing [$REPOS]"
 source $INSTALL_PATH/../repos/install.zsh
-
-mkdir $HOME/.hushlogin
 
 echo "Installation done! Todo list:"
 for todo in $TODOS
