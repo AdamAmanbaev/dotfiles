@@ -68,6 +68,8 @@ done
 echo "Installing [$REPOS]"
 source $INSTALL_PATH/../repos/install.zsh
 
+mkdir $HOME/.hushlogin
+
 echo "Installation done! Todo list:"
 for todo in $TODOS
 do
