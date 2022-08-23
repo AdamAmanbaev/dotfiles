@@ -20,6 +20,8 @@ done
 echo "Write a space-separated list of the modules [$MODULES] you would like to install or nothing for all"
 read -A MODULE
 
+echo "HERE IS THE SIZE OF MODULES: ${#MODULE[@]} "
+
 if [ ${#MODULE[@]} -gt 0 ]
 then
     echo "Installing all modules"
