@@ -22,9 +22,9 @@ read -A MODULE
 
 if [ ${#MODULE[@]} -gt 0 ]
 then
-    MODULES=("${MODULE[@]}")
-else 
     echo "Installing all modules!"
+else 
+    MODULES=("${MODULE[@]}")
 fi
 
 echo "Write a space-separated list of the repositories [$REPOS] you would like to install or nothing for all"
@@ -32,9 +32,9 @@ read -A REPO
 
 if [ ${#REPO[@]} -gt 0 ]
 then 
-    REPOS=("${REPO[@]}")
-else 
     echo "Installing all repositories!"
+else 
+    REPOS=("${REPO[@]}")
 fi
 
 function want_home() {
