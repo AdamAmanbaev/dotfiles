@@ -30,6 +30,8 @@ fi
 echo "Write a space-separated list of the repositories [$REPOS] you would like to install or nothing for all"
 read -A REPO
 
+echo "HERE IS THE SIZE OF REPO ${#REPO[@]} "
+
 if [ ${#REPO[@]} -eq 1 ]
 then 
     echo "Installing all repositories"
