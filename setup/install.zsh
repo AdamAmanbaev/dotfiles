@@ -17,28 +17,6 @@ do
     read PROFILE\?"What profile is this machine [$PROFILES]? "
 done
 
-echo "Write a space-separated list of the modules [$MODULES] you would like to install or nothing for all"
-read -A MODULE
-
-if [ ${#MODULE[@]} -eq 1 ]
-then
-    echo "Installing all modules"
-else
-    MODULES=("${MODULE[@]}")
-fi
-
-echo "Write a space-separated list of the repositories [$REPOS] you would like to install or nothing for all"
-read -A REPO
-
-echo "HERE IS THE SIZE OF REPO ${#REPO[@]} "
-
-if [ ${#REPO[@]} -eq 1 ]
-then 
-    echo "Installing all repositories"
-else
-    REPOS=("${REPO[@]}")
-fi
-
 function want_home() {
     [[ $PROFILE == "home" ]] 
 }
