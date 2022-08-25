@@ -12,8 +12,8 @@ set mouse=a
 set expandtab
 
 " Make tabs be 4 spaces
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 " Indentation
 set autoindent " Use indentation from last line
