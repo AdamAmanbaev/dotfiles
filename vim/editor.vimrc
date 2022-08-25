@@ -5,6 +5,9 @@ filetype indent on
 " Enable syntax highlighting
 syntax enable
 
+" Enable mouse
+set mouse=a
+
 " Use spaces instead of tabs
 set expandtab
 
