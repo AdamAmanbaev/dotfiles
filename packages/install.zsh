@@ -11,7 +11,7 @@ fi
  
 if want_dev
 then
-    DEV_PACKAGES=(g++ gcc cmake neofetch lolcat)
+    DEV_PACKAGES=(g++ gcc cmake neofetch lolcat texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra texlive-latex-base)
     echo "Installing dev packages ($DEV_PACKAGES)"
     sudo apt-get install -y $DEV_PACKAGES
 fi
