@@ -62,8 +62,6 @@ if executable(s:clip)
 	augroup END
 endif
 
-" Pathogen 'runtime'-manager
-execute pathogen#infect()
 
 " Latex settings
 autocmd fileType tex:NoMatchParen
@@ -77,6 +75,9 @@ let g:tex_flavor = 'latex'
 let g:vimtex_motion_matchparen = 0
 let g:vimtex_fold_manual = 1
 let g:vimtex_matchparen_enabled = 0
+
+" Pathogen 'runtime'-manager
+execute pathogen#infect()
 
 " Latex numbering
 au BufNewFile,BufRead *.tex
