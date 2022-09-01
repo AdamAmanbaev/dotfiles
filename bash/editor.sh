@@ -125,6 +125,7 @@ neofetch --ascii_distro arch linux | lolcat
 ulimit -s unlimited  # stack-limit
 export PATH=$PATH:/mnt/c/users/adamamanbaev/AppData/Local/SumatraPDF/
 export PATH=$PATH:/usr/local/stata16/
+export PATH=$PATH:~/Code/dotfiles/zsh/
 alias exp='/mnt/c/WINDOWS/explorer.exe'
 
 PATH=$(/usr/bin/printenv PATH | /usr/bin/perl -ne 'print join(":", grep { !/\/mnt\/[a-z]/ } split(/:/));')
