@@ -3,7 +3,7 @@ set -e
 INSTALL_PATH=$(dirname -- "$0:A")
 PROFILES=(basic dev home)
 MODULES=(packages home zsh vim bash contest)
-REPOS=(gymnasiearbete cp-solutions)
+REPOS=(gymnasiearbete)
 
 if [[ -z $1 ]]
 then
