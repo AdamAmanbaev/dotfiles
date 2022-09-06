@@ -132,3 +132,6 @@ PATH=$(/usr/bin/printenv PATH | /usr/bin/perl -ne 'print join(":", grep { !/\/mn
 
 export PATH="$(echo "$PATH" | python3 -c "import sys; path = sys.stdin.read().split(':'); path = [pp for pp in path if '/mnt/c' not in pp]; print(':'.join(path))")"
 export LD_LIBRARY_PATH="$(echo "$LD_LIBRARY_PATH" | python3 -c "import sys; path = sys.stdin.read().split(':'); path = [pp for pp in path if '/mnt/c' not in pp]; print(':'.join(path))")"
+
+# Alias
+alias c='g++ -DLOCAL -DDEBUG -fsanitize=address -fsanitize=undefined -O3 -std=c++20 -o $1 $1.cpp' 
