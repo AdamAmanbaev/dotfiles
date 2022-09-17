@@ -48,10 +48,10 @@ set autoread
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Insert template to contest-files A[1, 2, 3, ...].cpp
-autocmd BufNewFile A*.cpp 0r $HOME/Code/contest/library/template.cpp
+autocmd BufNewFile *A.cpp 0r $HOME/Code/contest/library/template.cpp
 
 " Insert long template to contest-files B[1, 2, 3, ...].cpp
-autocmd BufNewFile B*.cpp 0r $HOME/Code/contest/library/longtemplate.cpp
+autocmd BufNewFile *B.cpp 0r $HOME/Code/contest/library/longtemplate.cpp
 
 " Clipboard configuration (yank->clip.exe)
 let s:clip = '/mnt/c/Windows/System32/clip.exe' 
