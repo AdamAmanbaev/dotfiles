@@ -1,4 +1,4 @@
-## dotfiles (taken from jsannemo)
+## dotfiles 
 
 ```
 sudo apt install vim git zsh
