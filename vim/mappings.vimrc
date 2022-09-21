@@ -11,7 +11,7 @@ imap jk <ESC>
 map <C-a> <ESC>ggVG<CR>
 
 " Compilation of cpp-files using build.zsh and vim-errormarker
-set makeprg=build.sh\ %:r
+set makeprg=build.zsh\ %:r
 autocmd filetype cpp nnoremap <F9> :w <bar> Make <CR> 
 autocmd filetype cpp nnoremap <F10> :vertical terminal ++shell ++cols=40 ./%:r<CR>
 autocmd filetype cpp nnoremap <F12> :!./%:r<CR>
