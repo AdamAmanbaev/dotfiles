@@ -48,4 +48,11 @@ if &term =~ "xterm\\|rxvt"
     " use \003]12;gray\007 for gnome-terminal and rxvt up to version 9.21
 endif
 
-colorscheme nord
+" coloscheme 
+set termguicolors
+colorscheme nightfly
+set background=dark
+
+" set statusline
+set laststatus=2
+let g:airline_theme='cobalt2'

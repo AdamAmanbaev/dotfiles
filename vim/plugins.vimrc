@@ -3,7 +3,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'arcticicestudio/nord-vim'
+Plugin 'bluz71/vim-nightfly-guicolors'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'lervag/vimtex'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fugitive'
