@@ -47,10 +47,10 @@ set autoread
 " Return to last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-" Insert template to contest-files A[1, 2, 3, ...].cpp
+" Insert template to contest-files [1, 2, 3, ...]A.cpp
 autocmd BufNewFile *A.cpp 0r $HOME/Code/contest/library/template.cpp
 
-" Insert long template to contest-files B[1, 2, 3, ...].cpp
+" Insert long template to contest-files [1, 2, 3, ...]B.cpp
 autocmd BufNewFile *B.cpp 0r $HOME/Code/contest/library/longtemplate.cpp
 
 " Clipboard configuration (yank->clip.exe)
