@@ -20,6 +20,9 @@ set autoindent " Use indentation from last line
 set smartindent " Automatically add indendation after e.g. { 
 set cindent " Use C-indentation
 
+" Namespaces and visibility labels should not increase indentation
+set cino=N-sg0
+
 " Use unix line endings by default
 set fileformats=unix,dos,mac
 
