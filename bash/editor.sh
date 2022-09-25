@@ -135,3 +135,15 @@ export LD_LIBRARY_PATH="$(echo "$LD_LIBRARY_PATH" | python3 -c "import sys; path
 
 # Alias
 alias c='g++ -DLOCAL -DDEBUG -fsanitize=address -fsanitize=undefined -O3 -std=c++20 -o $1 $1.cpp' 
+
+# remove annoying latex files
+alias cleanup="rm *aux *fdb_latexmk *fls *log *out *gz"
+
+# ls settings
+alias ls="ls --color=auto"
+
+# creates and enters directory
+function mkcd() {
+        mkdir -p $1
+        cd $1
+}

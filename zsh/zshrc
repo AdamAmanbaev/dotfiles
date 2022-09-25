@@ -1,8 +1,6 @@
 DOTFILES=$HOME/Code/dotfiles
 ZSHFILES=$DOTFILES/zsh
 
-source $ZSHFILES/directories.zsh
-source $ZSHFILES/history.zsh
 source $ZSHFILES/git.zsh
 source $ZSHFILES/history.zsh
 
