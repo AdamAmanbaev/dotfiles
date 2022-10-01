@@ -1,26 +1,7 @@
-% define class of document
 \documentclass[titlepage]{article}
 
-\hfuzz=50pt
+\usepackage{preamble}
 
-% packages 
-\usepackage[cmintegrals,cmbraces]{newtxmath}
-\usepackage{ebgaramond-maths}
-\usepackage[T1]{fontenc}
-\usepackage{hyperref}
+\begin{document}
 
-% keywords command
-\providecommand{\keywords}[1] { 
-    \small
-    \textbf{\textit{Keywords ---}} #1
-}
-
-% title 
-\title{}
-
-% author and supervisors
-\author{}
-
-% date-specification
-\date{}
-
+\end{document}
