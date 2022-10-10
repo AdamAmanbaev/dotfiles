@@ -66,7 +66,6 @@ endif
 " Latex settings
 autocmd fileType tex:NoMatchParen
 autocmd fileType tex:set tw=110
-autocmd BufNewFile *.tex 0r $HOME/Code/dotfiles/vim/latextemplate.txt
 
 " Vimtex configuration with SumatraPDF 
 let g:vimtex_view_general_viewer = 'SumatraPDF'

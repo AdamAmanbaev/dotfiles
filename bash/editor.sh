@@ -137,7 +137,7 @@ export LD_LIBRARY_PATH="$(echo "$LD_LIBRARY_PATH" | python3 -c "import sys; path
 alias c='g++ -DLOCAL -DDEBUG -fsanitize=address -fsanitize=undefined -O3 -std=c++20 -o $1 $1.cpp' 
 
 # remove annoying latex files
-alias cleanup="rm *toc *aux *fdb_latexmk *fls *log *out *gz *bbl *blg *nlo"
+alias cleanup="rm *ilg *nls *toc *aux *fdb_latexmk *fls *log *out *gz *bbl *blg *nlo"
 
 # ls settings
 alias ls="ls --color=auto"
@@ -146,4 +146,9 @@ alias ls="ls --color=auto"
 function mkcd() {
         mkdir -p $1
         cd $1
+}
+
+# updates nomenclature in latex file
+nomenclature() {
+    makeindex "$1".nlo -s nomencl.ist -o "$1".nls
 }

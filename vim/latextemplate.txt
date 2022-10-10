@@ -1,7 +1,0 @@
-\documentclass[titlepage]{article}
-
-\usepackage{preamble}
-
-\begin{document}
-
-\end{document}
