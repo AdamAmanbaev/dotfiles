@@ -4,6 +4,6 @@ do
         then 
             git pull origin
         else 
-            git clone git@github.com:AdamAmanbaev/$repository $HOME/Code/$repository
+            git clone git@github.com:chopingu/$repository $HOME/Code/$repository
     fi
-done 
+done
