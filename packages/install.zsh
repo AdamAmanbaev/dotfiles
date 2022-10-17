@@ -15,4 +15,3 @@ then
     echo "Installing dev packages ($DEV_PACKAGES)"
     sudo apt-get install -y $DEV_PACKAGES
 fi
-
