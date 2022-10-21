@@ -140,7 +140,7 @@ alias c='g++ -DLOCAL -DDEBUG -fsanitize=address -fsanitize=undefined -O3 -march=
 alias cleanup="rm *ilg *nls *toc *aux *fdb_latexmk *fls *log *out *gz *bbl *blg *nlo"
 
 # ls settings
-alias ls="ls --color=auto"
+alias ls='ls --color -h --group-directories-first'
 
 # creates and enters directory
 function mkcd() {
