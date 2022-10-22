@@ -3,7 +3,7 @@ set -e
 INSTALL_PATH=$(dirname -- "$0:A")
 PROFILES=(basic dev home)
 MODULES=(packages home zsh vim bash contest)
-REPOS=(gymnasiearbete latex ctf cp-solutions pingu-ml)
+REPOS=(gymnasiearbete latex ctf cp pingu-ml)
 
 if [[ -z $1 ]]
 then
