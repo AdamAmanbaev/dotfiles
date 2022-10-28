@@ -134,7 +134,7 @@ export PATH="$(echo "$PATH" | python3 -c "import sys; path = sys.stdin.read().sp
 export LD_LIBRARY_PATH="$(echo "$LD_LIBRARY_PATH" | python3 -c "import sys; path = sys.stdin.read().split(':'); path = [pp for pp in path if '/mnt/c' not in pp]; print(':'.join(path))")"
 
 # Alias
-alias c='g++ -DLOCAL -DDEBUG -fsanitize=address -fsanitize=undefined -O3 -march=native -std=c++20' 
+alias c='g++ -O3 -march=native -std=c++20' 
 
 # remove annoying latex files
 alias cleanup="rm *ilg *nls *toc *aux *fdb_latexmk *fls *log *out *gz *bbl *blg *nlo"
