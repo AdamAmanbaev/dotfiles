@@ -1,5 +1,5 @@
 ```
 Files to configure linux coding environment with vim 
 
-Credit: @jsannemo
+WARNING: Use at your own risk!
 ```
