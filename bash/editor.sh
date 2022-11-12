@@ -160,3 +160,6 @@ set -o vi
 set keymap vi-insert
 bind '"jk":vi-movement-mode'
 bind '"JK":vi-movement-mode'
+
+# Color in tmux
+export TERM="xterm-256color"
