@@ -38,8 +38,11 @@ try
 catch
 endtry
 
+" Highlights the word under the cursor
+noremap <silent> & :let @/ = "\\<<c-r><c-w>\\>"<cr>:set hlsearch<cr>
+
 " Increase the edit history 
-set history=500
+set history=1000
 
 " Reload files when changed outside
 set autoread
@@ -61,7 +64,6 @@ if executable(s:clip)
 		autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
 	augroup END
 endif
-
 
 " Latex settings
 autocmd fileType tex:NoMatchParen

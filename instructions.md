@@ -14,9 +14,6 @@ git clone git@github.com:chopingu/dotfiles.git $HOME/Code/dotfiles
 chmod +x $HOME/Code/dotfiles/setup/install.zsh
 $HOME/Code/dotfiles/setup/install.zsh
 
-chmod +x $HOME/Code/dotfiles/zsh/build.zsh
-chmod +x $HOME/Code/dotfiles/zsh/validate.zsh
-chmod +x $HOME/Code/dotfiles/zsh/stress.zsh
 
 " change neofetch .config
 ```

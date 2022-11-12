@@ -1,4 +1,5 @@
 #!/usr/bin/zsh
+
 set -e
 INSTALL_PATH=$(dirname -- "$0:A")
 PROFILES=(basic dev home)
@@ -29,11 +30,6 @@ function want_basic() {
     [[ $PROFILE == "basic" || want_dev ]]
 }
 
-TODOS=()
-function add_todo() {
-    TODOS+=($1)
-}
-
 function install() {
     echo "Installing module $1"
     MODULE_PATH=$INSTALL_PATH/../$1
@@ -49,9 +45,8 @@ echo "Installing [$REPOS]"
 source $INSTALL_PATH/../repos/install.zsh
 
 mkdir $HOME/.hushlogin
+touch $HOME/.hushlogin
 
-echo "Installation done! Todo list:"
-for todo in $TODOS
-do
-    echo "- $todo"
-done
+chmod +x $HOME/Code/dotfiles/zsh/build.zsh
+chmod +x $HOME/Code/dotfiles/zsh/validate.zsh
+chmod +x $HOME/Code/dotfiles/zsh/stress.zsh
