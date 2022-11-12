@@ -152,3 +152,11 @@ function mkcd() {
 nomenclature() {
     makeindex "$1".nlo -s nomencl.ist -o "$1".nls
 }
+
+# vi editing mode
+set -o vi
+
+# vi mode commands
+set keymap vi-insert
+bind '"jk":vi-movement-mode'
+bind '"JK":vi-movement-mode'

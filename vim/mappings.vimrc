@@ -8,7 +8,7 @@ inoremap {} {}
 " Short timoutlength to avoid problems
 inoremap jk <ESC>
 inoremap JK <ESC>
-set timeoutlen=200
+set timeoutlen=100
 
 " Select all with "Ctrl + a"
 map <C-a> <ESC>ggVG<CR>

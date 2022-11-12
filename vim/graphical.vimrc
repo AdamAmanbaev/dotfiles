@@ -4,6 +4,10 @@ set number
 " Show current command-inputs
 set showcmd
 
+" Provide some space between cursor and edges
+set scrolloff=2
+set sidescrolloff=5
+
 " Add relative line numbers in cmd-mode
 augroup numbertoggle
     autocmd!
