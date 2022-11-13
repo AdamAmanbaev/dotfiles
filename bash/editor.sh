@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
-      *) return;;
+    *) return;;
 esac
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -47,12 +47,12 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
     else
-	color_prompt=
+        color_prompt=
     fi
 fi
 
@@ -65,11 +65,11 @@ unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
+    xterm*|rxvt*)
+        PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+        ;;
+    *)
+        ;;
 esac
 
 # enable color support of ls and also add handy aliases
@@ -109,31 +109,34 @@ fi
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
 fi
 
-# turn off login prompt
+# Turn off login prompt
 touch $HOME/.hushlogin
 
 # Nice logo and info when starting terminal
 neofetch --ascii_distro arch linux | lolcat
 
-ulimit -s unlimited  # stack-limit
+# Stack limit
+ulimit -s unlimited  
+
+# Explorer alias
+alias exp='/mnt/c/WINDOWS/explorer.exe'
+
+# PATHS
 export PATH=$PATH:/mnt/c/users/adamamanbaev/AppData/Local/SumatraPDF/
 export PATH=$PATH:/usr/local/stata16/
 export PATH=$PATH:~/Code/dotfiles/zsh/
-alias exp='/mnt/c/WINDOWS/explorer.exe'
-
 PATH=$(/usr/bin/printenv PATH | /usr/bin/perl -ne 'print join(":", grep { !/\/mnt\/[a-z]/ } split(/:/));')
-
 export PATH="$(echo "$PATH" | python3 -c "import sys; path = sys.stdin.read().split(':'); path = [pp for pp in path if '/mnt/c' not in pp]; print(':'.join(path))")"
 export LD_LIBRARY_PATH="$(echo "$LD_LIBRARY_PATH" | python3 -c "import sys; path = sys.stdin.read().split(':'); path = [pp for pp in path if '/mnt/c' not in pp]; print(':'.join(path))")"
 
-# Alias
+# Compilation
 alias c='g++ -O3 -march=native -std=c++20' 
 
 # Remove annoying latex files
@@ -144,8 +147,8 @@ alias ls='ls --color -h --group-directories-first'
 
 # Creates and enters directory
 function mkcd() {
-        mkdir -p $1
-        cd $1
+    mkdir -p $1
+    cd $1
 }
 
 # Updates nomenclature in latex file
@@ -163,3 +166,14 @@ bind '"JK":vi-movement-mode'
 
 # Color in tmux
 export TERM="xterm-256color"
+
+# Find any directory and choose it
+fd() { 
+    local dir dir=$(find ${1:-.} -path '*/\.*' -prune -o -type d \
+        -print 2> /dev/null | fzf +m) && cd "$dir"
+}
+
+# Fuzzy search with preview from cmd
+fzfp() {
+    fzf --preview 'cat {}'
+}
