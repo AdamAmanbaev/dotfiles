@@ -174,7 +174,7 @@ fd() {
         -print 2> /dev/null | fzf +m) && cd "$dir"
 }
 
-# Fuzzy search with preview from cmd
-fzfp() {
-    fzf --preview 'cat {}'
+# Find any file and vim into it
+fvim() {
+    vim $(fzf)
 }
