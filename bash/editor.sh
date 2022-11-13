@@ -169,7 +169,8 @@ export TERM="xterm-256color"
 
 # Find any directory and choose it
 fd() { 
-    local dir dir=$(find ${1:-.} -path '*/\.*' -prune -o -type d \
+    local dir 
+    dir=$(find ${1:-.} -path '*/\.*' -prune -o -type d \
         -print 2> /dev/null | fzf +m) && cd "$dir"
 }
 
