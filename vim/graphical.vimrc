@@ -57,3 +57,9 @@ set background=dark
 " set statusline
 set laststatus=2
 let g:airline_theme='cobalt2'
+
+" set anyfold
+filetype plugin indent on 
+syntax on                 
+let g:anyfold_fold_comments=1
+autocmd BufEnter * :AnyFoldActivate
