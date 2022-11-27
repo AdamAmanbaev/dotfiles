@@ -51,18 +51,19 @@ endif
 
 " coloscheme 
 set termguicolors
-colorscheme nightfly
-set background=dark
+set t_Co=256
+set bg=light
+colorscheme PaperColor
 
 " set vim-rainbow
 let g:rainbow_active = 1
 
 " set statusline
 set laststatus=2
-let g:airline_theme='cobalt2'
+let g:airline_theme='papercolor'
 
 " set anyfold
-filetype plugin indent on 
-syntax on                 
-let g:anyfold_fold_comments=1
-autocmd BufEnter * :AnyFoldActivate
+" filetype plugin indent on 
+" syntax on                 
+" let g:anyfold_fold_comments=1
+" autocmd BufEnter * :AnyFoldActivate
