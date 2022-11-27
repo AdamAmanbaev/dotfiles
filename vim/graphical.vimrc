@@ -54,6 +54,9 @@ set termguicolors
 colorscheme nightfly
 set background=dark
 
+" set vim-rainbow
+let g:rainbow_active = 1
+
 " set statusline
 set laststatus=2
 let g:airline_theme='cobalt2'
