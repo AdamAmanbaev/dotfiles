@@ -51,10 +51,11 @@ set showmatch
 
 " coloscheme 
 set termguicolors
-colorscheme gotham
+colorscheme iceberg
+set bg=dark
 
 " set vim-rainbow
-let g:rainbow_active = 1
+" let g:rainbow_active = 1
 
 " set statusline
 set laststatus=2

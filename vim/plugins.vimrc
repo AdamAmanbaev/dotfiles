@@ -1,6 +1,6 @@
 call plug#begin()
 Plug 'bfrg/vim-cpp-modern'
-Plug 'whatyouhide/vim-gotham'
+Plug 'cocopon/iceberg.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'lervag/vimtex'
