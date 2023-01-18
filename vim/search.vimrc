@@ -6,4 +6,4 @@ set smartcase " ...unless the pattern contains something uppercase
 set hlsearch
 
 " Show search results while typing them 
-set incsearch
+" set incsearch

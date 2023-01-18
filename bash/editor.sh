@@ -140,7 +140,7 @@ export LD_LIBRARY_PATH="$(echo "$LD_LIBRARY_PATH" | python3 -c "import sys; path
 alias c='g++ -O3 -march=native -std=c++20' 
 
 # Remove annoying latex files
-alias cleanup="rm *ilg *nls *toc *aux *fdb_latexmk *fls *log *out *gz *bbl *blg *nlo"
+alias cleanup="rm *xdv *ilg *nls *toc *aux *fdb_latexmk *fls *log *out *gz *bbl *blg *nlo"
 
 # ls settings
 alias ls='ls --color -h --group-directories-first'

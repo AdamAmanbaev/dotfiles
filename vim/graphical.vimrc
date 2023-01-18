@@ -50,9 +50,9 @@ set showmatch
 "endif
 
 " coloscheme 
-set termguicolors
-colorscheme iceberg
-set bg=dark
+" set termguicolors
+" colorscheme iceberg
+" set bg=light
 
 " set vim-rainbow
 " let g:rainbow_active = 1
