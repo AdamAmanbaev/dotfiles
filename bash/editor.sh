@@ -120,7 +120,7 @@ fi
 touch $HOME/.hushlogin
 
 # Nice logo and info when starting terminal
-# neofetch --ascii_distro arch linux | lolcat
+neofetch --ascii_distro arch linux | lolcat
 
 # Stack limit
 ulimit -s unlimited  
