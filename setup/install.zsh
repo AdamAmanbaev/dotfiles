@@ -4,7 +4,7 @@ set -e
 INSTALL_PATH=$(dirname -- "$0:A")
 PROFILES=(basic dev home)
 MODULES=(packages home tmux zsh vim bash contest)
-REPOS=(hajar latex ctf cp pingu-ml)
+REPOS=(latex ctf cp cp-toolkit)
 
 if [[ -z $1 ]]
 then
