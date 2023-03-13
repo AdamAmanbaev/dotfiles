@@ -49,10 +49,10 @@ set showmatch
 "    " use \003]12;gray\007 for gnome-terminal and rxvt up to version 9.21
 "endif
 
-" coloscheme 
-" set termguicolors
-" colorscheme iceberg
-" set bg=light
+" colorscheme 
+set termguicolors
+colorscheme iceberg
+set bg=dark
 
 " set vim-rainbow
 " let g:rainbow_active = 1
