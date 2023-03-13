@@ -1,6 +1,9 @@
 ```
-sudo apt install vim git zsh
+sudo useradd -m <username>
+sudo passwd <username>
 sudo usermod -aG sudo <username>
+
+sudo apt install vim git zsh
 
 " add "su - <username>" to .bashrc
 " new tab
