@@ -43,6 +43,8 @@ newgrp docker
 " add the following to /etc/wsl.conf
 [boot]
 systemd=true
+
+" wsl --setdefault Ubuntu-22.04 if wsl and docker are still bugging
 ```
 
 ```
