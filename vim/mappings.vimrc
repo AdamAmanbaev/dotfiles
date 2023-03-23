@@ -11,6 +11,12 @@ inoremap JK <ESC>
 " Select all with "Ctrl + a"
 map <C-a> <ESC>ggVG<CR>
 
+" Switch between windows when not in tmux
+nnoremap <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+
 " Compilation of cpp-files using build.zsh and vim-errormarker
 set makeprg=build.zsh\ %:r
 autocmd filetype cpp nnoremap <F7> :w <bar> Make <CR> 
@@ -22,20 +28,3 @@ map <F9> :NERDTreeToggle<CR>
 
 " Comment current line in normal-mode
 autocmd filetype cpp nnoremap <C-C> :s/^\(\s*\)/\1\/\/<CR> :s/^\(\s*\)\/\/\/\//\1<CR> $
-
-" Use , as leader
-let mapleader=","
-let g:mapleader=","
-
-" Use Ctrl+L to clear highlighting
-map <C-l> :noh<cr>
-
-" Tab handling
-" ,te for open new tab in current directory
-map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
-" ,tx for close tab
-map <leader>tx :tabclose<cr>
-" ,tn for next tab
-map <leader>tn :tabnext<cr>
-" ,tp for last tab
-map <leader>tp :tabprevious<cr>
