@@ -13,7 +13,7 @@ ssh-keygen -t ed25519 -C <github e-mail>
 [//]: # add key to Github Account
 
 [//]: # install lsd
-[lsd installation package](https://github.com/lsd-rs/lsd/releases/download/0.23.1/lsd_0.23.1_amd64.deb)
+[lsd installation package](https://github.com/lsd-rs/lsd/releases/download/0.23.1/lsd_0.23.1_amd64.deb/)
 sudo dpkg -i lsd_0.23.1_amd64.deb
 
 mkdir $HOME/Code
