@@ -51,8 +51,6 @@ set showmatch
 
 " colorscheme 
 set termguicolors
-colorscheme iceberg
-set bg=dark
 
 " set vim-rainbow
 " let g:rainbow_active = 1

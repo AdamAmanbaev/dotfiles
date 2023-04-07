@@ -1,1 +1,17 @@
-exec bash
+DOTFILES=$HOME/Code/dotfiles
+ZSHFILES=$DOTFILES/zsh
+
+source $ZSHFILES/completion.zsh
+source $ZSHFILES/directories.zsh
+source $ZSHFILES/history.zsh
+source $ZSHFILES/git.zsh
+source $ZSHFILES/keybinds.zsh
+source $ZSHFILES/paths.zsh
+source $ZSHFILES/misc.zsh
+
+autoload -U colors && colors
+autoload -U promptinit && promptinit
+autoload -U add-zsh-hook
+
+setopt prompt_subst
+PROMPT="%{$fg[magenta]%}%n%{$reset_color%}@%{$fg[yellow]%}%m%{$reset_color%}:%~ "

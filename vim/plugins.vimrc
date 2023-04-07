@@ -1,8 +1,8 @@
 call plug#begin()
-Plug 'bfrg/vim-cpp-modern'
-Plug 'cocopon/iceberg.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'bfrg/vim-cpp-modern'
+"Plug 'cocopon/iceberg.vim'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'

@@ -9,7 +9,7 @@ fi
  
 if want_dev
 then
-    DEV_PACKAGES=(g++ gcc cmake python3 python3-pip fzf tmux neofetch lolcat texlive texlive-xetex latexmk texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra python3-pygments)
+    DEV_PACKAGES=(g++ gcc python3 python3-pip fzf tmux neofetch lolcat texlive texlive-xetex latexmk texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra python3-pygments bat)
     echo "Installing dev packages ($DEV_PACKAGES)"
     sudo apt-get install -y $DEV_PACKAGES
 fi
