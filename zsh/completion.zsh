@@ -1,4 +1,4 @@
-# Use modern completion system
+# use modern completion system
 autoload -Uz compinit
 compinit
 

@@ -20,9 +20,6 @@ alias ..="cd .."
 alias ....="cd ...."
 alias ......="cd ......"
 
-# cp settings
-alias cp="cp -i" # -i asks us before overwriting a file
-
 # grep settings
 GREP_EXCLUDE_DIR=".git"
 GREP_FLAGS="--color=auto --exclude-dir=${GREP_EXCLUDE_DIR}"
@@ -32,28 +29,11 @@ alias grep="grep ${GREP_FLAGS}"
 alias l="ls -lah --color=auto"
 alias ls="ls --color=auto"
 
-# mv settings
-alias mv="mv -i" # -i asks us before overwriting a file
-
-# rm settings
-alias rm="rm -i" # -i asks us before removing any file
-
 # mkdir makes it 
 alias md="mkdir -p"
 
+# makes directory and enters it
 function mkcd() {
 	mkdir -p $1
 	cd $1
-}
-
-# find any directory and enter it
-fd() {
-    local dir
-    dir=$(find ${1:-.} -path '*/\.*' -prune -o -type d \
-        -print 2> /dev/null | fzf +m) && cd "$dir"
-}
-
-# find any file and vim into it
-fvim() {
-    vim $(fzf)
 }
