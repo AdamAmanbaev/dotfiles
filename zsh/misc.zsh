@@ -23,3 +23,6 @@ fd() {
 fvim() {
     vim $(fzf)
 }
+
+# use batcat instead of cat
+alias cat='batcat --paging=never'
