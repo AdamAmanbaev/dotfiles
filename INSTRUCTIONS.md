@@ -10,7 +10,7 @@ sudo apt install vim git zsh
 exec zsh
 
 ssh-keygen -t ed25519 -C <github e-mail>
-[//]: # add key to Github Account
+[//]: # add key to github account
 
 [//]: # install lsd
 [lsd installation package](https://github.com/lsd-rs/lsd/releases/download/0.23.1/lsd_0.23.1_amd64.deb/)
