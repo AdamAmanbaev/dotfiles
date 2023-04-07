@@ -44,7 +44,7 @@ done
 echo "Installing [$REPOS]"
 source $INSTALL_PATH/../repos/install.zsh
 
-mkdir $HOME/.hushlogin
+mkdir -p $HOME/.hushlogin
 touch $HOME/.hushlogin
 
 chmod +x $HOME/Code/dotfiles/zsh/stress/build.zsh
