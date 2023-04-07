@@ -47,6 +47,6 @@ source $INSTALL_PATH/../repos/install.zsh
 mkdir $HOME/.hushlogin
 touch $HOME/.hushlogin
 
-chmod +x $HOME/Code/dotfiles/zsh/scripts/build.zsh
-chmod +x $HOME/Code/dotfiles/zsh/scripts/validate.zsh
-chmod +x $HOME/Code/dotfiles/zsh/scripts/stress.zsh
+chmod +x $HOME/Code/dotfiles/zsh/stress/build.zsh
+chmod +x $HOME/Code/dotfiles/zsh/stress/validate.zsh
+chmod +x $HOME/Code/dotfiles/zsh/stress/stress.zsh
