@@ -1,1 +1,1 @@
-curl -sS https://starship.rs/install.sh | sh -y
+curl -sS https://starship.rs/install.sh | sh
