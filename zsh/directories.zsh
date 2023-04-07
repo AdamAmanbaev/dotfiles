@@ -15,19 +15,15 @@ alias 7='cd -7'
 alias 8='cd -8'
 alias 9='cd -9'
 
-# cd settings
-alias ..="cd .."
-alias ....="cd ...."
-alias ......="cd ......"
-
 # grep settings
 GREP_EXCLUDE_DIR=".git"
 GREP_FLAGS="--color=auto --exclude-dir=${GREP_EXCLUDE_DIR}"
 alias grep="grep ${GREP_FLAGS}"
 
 # ls settings
-alias l="ls -lah --color=auto"
-alias ls="ls --color=auto"
+alias ls='lsd -lh --group-directories-first'
+alias la='lsd -lah --group-directories-first'
+alias lt='lsd -lh --group-directories-first --tree'
 
 # mkdir makes it 
 alias md="mkdir -p"
