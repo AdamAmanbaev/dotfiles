@@ -3,7 +3,7 @@ filetype plugin on
 filetype indent on
 
 " Enable syntax highlighting
-syntax enable
+set syntax=on
 
 " Enable mouse
 set mouse=a
@@ -22,9 +22,6 @@ set cindent " Use C-indentation
 
 " Namespaces and visibility labels should not increase indentation
 set cino=N-sg0
-
-" Use unix line endings by default
-set fileformats=unix,dos,mac
 
 " Disable backups and swaps 
 set nobackup 

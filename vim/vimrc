@@ -1,4 +1,4 @@
-" Don't be vim compatible
+" Dont be vim compatible
 set nocompatible
 
 source ~/Code/dotfiles/vim/plugins.vimrc

@@ -28,3 +28,5 @@ map <F9> :NERDTreeToggle<CR>
 
 " Comment current line in normal-mode
 autocmd filetype cpp nnoremap <C-C> :s/^\(\s*\)/\1\/\/<CR> :s/^\(\s*\)\/\/\/\//\1<CR> $
+
+map <F5> :wall!<CR>:!sbcl --load foo.cl<CR><CR>
