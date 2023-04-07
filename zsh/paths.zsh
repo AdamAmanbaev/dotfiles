@@ -1,9 +1,12 @@
+# starship config
+export STARSHIP_CONFIG=$HOME/Code/dotfiles/starship/starship.toml
+
 # live latex editing
 export PATH=$PATH:/mnt/c/users/adamamanbaev/AppData/Local/SumatraPDF/
 export PATH=$PATH:/usr/local/stata16/
 
 # stress-testing scripts
-export PATH=$PATH:~/Code/dotfiles/zsh/scripts
+export PATH=$PATH:~/Code/dotfiles/zsh/stress
 
 # to access sumatrapdf from wsl
 PATH=$(/usr/bin/printenv PATH | /usr/bin/perl -ne 'print join(":", grep { !/\/mnt\/[a-z]/ } split(/:/));')
