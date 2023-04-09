@@ -4,7 +4,7 @@ sudo useradd -m <username>
 sudo passwd <username>
 sudo usermod -aG sudo <username>
 
-sudo apt install vim git zsh
+sudo apt install vim git zsh -y
 
 [//]: # add "su - <username>" to .zshrc
 exec zsh
