@@ -1,4 +1,5 @@
 call plug#begin()
+Plug 'petRUShka/vim-sage'
 Plug 'bfrg/vim-cpp-modern'
 Plug 'vim-airline/vim-airline'
 Plug 'bluz71/vim-nightfly-colors', { 'as': 'nightfly' }
