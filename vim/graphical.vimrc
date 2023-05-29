@@ -54,7 +54,7 @@ set termguicolors
 colorscheme nightfly
 
 " set vim-rainbow
-let g:rainbow_active=1
+let g:rainbow_active=0
 
 " set statusline
 set laststatus=2

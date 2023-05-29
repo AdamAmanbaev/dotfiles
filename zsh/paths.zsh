@@ -15,3 +15,6 @@ export LD_LIBRARY_PATH="$(echo "$LD_LIBRARY_PATH" | python3 -c "import sys; path
 
 # exprt colors to tmux
 export TERM="xterm-256color"
+
+# cmd.exe
+export PATH=$PATH:/mnt/c/Windows/System32/
