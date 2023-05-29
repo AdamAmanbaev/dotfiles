@@ -59,6 +59,21 @@ wsl --setdefault Ubuntu-22.04
 ```
 
 ```
+[//]: # Vim markdown preview setup
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+
+npm install --global yarn
+
+:call mkdp#util#install()
+
+sudo ln -s /mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe /usr/bin/firefox
+
+[//]: # add the following in the mkdp.vim config file
+let g:mkdp_browser = 'firefox'
+```
+
+```
 [//]: # nightfly colorscheme to add in windows terminal json
 {
     "name": "nightfly",
