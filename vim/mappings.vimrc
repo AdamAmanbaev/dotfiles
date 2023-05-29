@@ -19,12 +19,16 @@ nnoremap <C-L> <C-W>l
 
 " Compilation of cpp-files using build.zsh and vim-errormarker
 set makeprg=build.zsh\ %:r
-autocmd filetype cpp nnoremap <F7> :w <bar> Make <CR> 
-autocmd filetype cpp nnoremap <F8> :vertical terminal ++shell ++cols=60 ./%:r<CR>
-autocmd filetype cpp nnoremap <F6> :!./%:r<CR>
+autocmd filetype cpp nnoremap <F9> :w <bar> Make <CR> 
+autocmd filetype cpp nnoremap <F10> :vertical terminal ++shell ++cols=60 ./%:r<CR>
+autocmd filetype cpp nnoremap <F11> :!./%:r<CR>
+
+" Markdown preview toggle
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+autocmd filetype markdown nmap <F9> <Plug>MarkdownPreviewToggle
 
 " Nerdtree
-map <F9> :NERDTreeToggle<CR>
+map <F8> :NERDTreeToggle<CR>
 
 " Comment current line in normal-mode
 autocmd filetype cpp nnoremap <C-C> :s/^\(\s*\)/\1\/\/<CR> :s/^\(\s*\)\/\/\/\//\1<CR> $
