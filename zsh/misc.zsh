@@ -26,3 +26,6 @@ fvim() {
 
 # use batcat instead of cat
 alias cat='batcat --paging=never'
+
+# silence gdb startup
+alias gdb='gdb -q'
