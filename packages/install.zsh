@@ -14,7 +14,11 @@ fi
  
 if want_dev
 then
-    DEV_PACKAGES=(g++ gcc python3 python3-pip fzf tmux texlive texlive-xetex latexmk texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra python3-pygments bat)
+    DEV_PACKAGES=(g++ gcc python3 python3-pip fzf tmux texlive texlive-xetex latexmk texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra python3-pygments bat gdb)
     echo "Installing dev packages ($DEV_PACKAGES)"
     sudo apt-get install -y $DEV_PACKAGES
+    sudo apt-get -y install git autoconf libelf-dev libtool
+    git clone https://gitlab.com/cespedes/ltrace.git /tmp/ltrace
+    cd /tmp/ltrace && ./autogen.sh && ./configure && make && make install
+    bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
 fi
