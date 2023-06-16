@@ -18,3 +18,6 @@ export TERM="xterm-256color"
 
 # cmd.exe
 export PATH=$PATH:/mnt/c/Windows/System32/
+
+# bin
+export PATH=$PATH:/home/chopingu/.local/bin
