@@ -19,6 +19,9 @@ then
     sudo apt-get install -y $DEV_PACKAGES
     sudo apt-get -y install git autoconf libelf-dev libtool
     git clone https://gitlab.com/cespedes/ltrace.git /tmp/ltrace
-    cd /tmp/ltrace && ./autogen.sh && ./configure && make && make install
+    cd /tmp/ltrace && ./autogen.sh && ./configure && 
+    sudo make
+    sudo make install
+    cd $HOME
     bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
 fi
