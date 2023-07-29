@@ -3,7 +3,7 @@
 set -e
 INSTALL_PATH=$(dirname -- "$0:A")
 PROFILES=(basic dev home)
-MODULES=(packages tmux zsh starship vim contest)
+MODULES=(packages tmux zsh vim contest)
 REPOS=(latex ctf cp)
 
 if [[ -z $1 ]]

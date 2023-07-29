@@ -33,3 +33,5 @@ function mkcd() {
 	mkdir -p $1
 	cd $1
 }
+
+PS1='%F{blue}%~ %(?.%F{green}.%F{red})%#%f '
