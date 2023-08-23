@@ -51,7 +51,6 @@ endif
 
 " colorscheme 
 set termguicolors
-colorscheme nightfly
 
 " set vim-rainbow
 let g:rainbow_active=1

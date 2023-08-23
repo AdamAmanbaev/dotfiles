@@ -18,7 +18,6 @@ set tabstop=2
 " Indentation
 set autoindent " Use indentation from last line
 set smartindent " Automatically add indendation after e.g. { 
-set cindent " Use C-indentation
 
 " Namespaces and visibility labels should not increase indentation
 set cino=N-sg0
@@ -34,9 +33,6 @@ try
     set undofile
 catch
 endtry
-
-" Highlights the word under the cursor
-noremap <silent> & :let @/ = "\\<<c-r><c-w>\\>"<cr>:set hlsearch<cr>
 
 " Increase the edit history 
 set history=1000
