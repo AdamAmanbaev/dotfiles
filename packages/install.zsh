@@ -40,7 +40,7 @@ rm lsd_0.23.1_amd64.deb
 echo "Setting up vim markdown live preview"
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
 sudo apt-get install -y nodejs
-npm install --global yarn
+sudo npm install --global yarn
 sudo ln -s /mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe /usr/bin/firefox
 
 echo "Setting up docker"
