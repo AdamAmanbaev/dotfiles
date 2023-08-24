@@ -37,6 +37,12 @@ wget https://github.com/lsd-rs/lsd/releases/download/0.23.1/lsd_0.23.1_amd64.deb
 sudo dpkg -i lsd_0.23.1_amd64.deb
 rm lsd_0.23.1_amd64.deb
 
+echo "Setting up vim markdown live preview"
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
+sudo apt-get install -y nodejs
+npm install --global yarn
+sudo ln -s /mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe /usr/bin/firefox
+
 echo "Setting up docker"
 sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates curl gnupg lsb-release
@@ -52,9 +58,3 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 sudo apt-get install -y docker-compose
 sudo gpasswd -a $USER docker
 newgrp docker
-
-echo "Setting up vim markdown live preview"
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
-sudo apt-get install -y nodejs
-npm install --global yarn
-sudo ln -s /mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe /usr/bin/firefox
