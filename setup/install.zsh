@@ -23,6 +23,5 @@ source $INSTALL_PATH/../repos/install.zsh
 mkdir -p $HOME/.hushlogin
 touch $HOME/.hushlogin
 
-chmod +x $HOME/Code/cp/library/stress/build.zsh
 chmod +x $HOME/Code/cp/library/stress/validate.zsh
 chmod +x $HOME/Code/cp/library/stress/stress.zsh
