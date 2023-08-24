@@ -11,6 +11,9 @@ export TERM="xterm-256color"
 # wt.exe
 export PATH=$PATH:/mnt/c/Users/adama/AppData/Local/Microsoft/WindowsApps
 
+# cmd.exe
+export PATH=$PATH:/mnt/c/Windows/System32/
+
 # cmd
 alias cmd='wt.exe cmd'
 
