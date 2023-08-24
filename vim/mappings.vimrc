@@ -18,10 +18,11 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 
 " Compilation of cpp-files using build.zsh and vim-errormarker
-set makeprg=build.zsh\ %:r
-autocmd filetype cpp nnoremap <F8> :w <bar> Make <CR> 
-autocmd filetype cpp nnoremap <F9> :vertical terminal ++shell ++cols=60 ./%:r<CR>
-autocmd filetype cpp nnoremap <F10> :!./%:r<CR>
+autocmd filetype cpp nnoremap <F8> :w <bar> !wt.exe cmd /t:0A /c "wsl -u ${USER} --cd ${PWD} -e g++ -DDEBUG -fsanitize=undefined,address -std=c++20 %:r.cpp -o %:r" <CR><CR>
+autocmd filetype cpp nnoremap <F9> :!wt.exe cmd /t:0A /k "wsl -u ${USER} --cd ${PWD} -e ./%:r" <CR><CR>
+
+" Run python files
+autocmd filetype python nnoremap <F8> :w <bar> !wt.exe cmd /t:0A /k "wsl -u ${USER} --cd ${PWD} -e python3 %:r.py" <CR><CR>
 
 " Markdown preview toggle
 autocmd BufNewFile,BufRead *.md set filetype=markdown

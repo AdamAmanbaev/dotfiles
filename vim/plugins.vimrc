@@ -4,7 +4,6 @@ Plug 'petRUShka/vim-sage'
 Plug 'bfrg/vim-cpp-modern'
 Plug 'vim-airline/vim-airline'
 Plug 'lervag/vimtex'
-Plug 'tpope/vim-dispatch'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
