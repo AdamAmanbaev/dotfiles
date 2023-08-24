@@ -27,14 +27,6 @@ chsh -s $(which zsh)
 ```
 
 ```
-[//]: # Vim markdown preview setup
-:call mkdp#util#install()
-
-[//]: # add the following in the mkdp.vim config file
-let g:mkdp_browser = 'firefox'
-```
-
-```
 [//]: # iceberg-light colorscheme to add in windows terminal json
 {
     "name": "iceberg-light",
