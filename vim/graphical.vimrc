@@ -50,7 +50,7 @@ if &term=~"xterm\\|rxvt"
 endif
 
 " colorscheme 
-set termguicolors
+" set termguicolors
 
 " set vim-rainbow
 let g:rainbow_active=1
