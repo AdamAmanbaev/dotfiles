@@ -44,9 +44,9 @@ set showmatch
 " Change color of cursor in insert-mode and otherwise
 if &term=~"xterm\\|rxvt"
    " use an purple cursor in insert mode
-   let &t_SI="\<Esc>]12;purple\x7"
+   let &t_SI="\<Esc>]12;black\x7"
    " use a orange cursor otherwise
-   let &t_EI="\<Esc>]12;orange\x7"
+   let &t_EI="\<Esc>]12;black\x7"
    silent !echo -ne "\033]12;red\007"
    " reset cursor when vim exits
    autocmd VimLeave * silent !echo -ne "\033]112\007"
