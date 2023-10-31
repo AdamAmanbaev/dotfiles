@@ -2,18 +2,15 @@
 filetype plugin on
 filetype indent on
 
-" Enable syntax highlighting
-set syntax=on
-
 " Enable mouse
 set mouse=a
 
 " Use spaces instead of tabs
-set expandtab
+ set expandtab
 
 " Make tabs be 4 spaces
 set shiftwidth=4
-set tabstop=2
+set tabstop=4
 
 " Indentation
 set autoindent " Use indentation from last line

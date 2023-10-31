@@ -23,6 +23,7 @@ sudo apt-get install -y $PROGRAMMING_PACKAGES
 
 echo "Building latest version of ltrace"
 sudo apt-get -y install git autoconf libelf-dev libtool
+sudo rm -rf /tmp/ltrace
 git clone https://gitlab.com/cespedes/ltrace.git /tmp/ltrace
 cd /tmp/ltrace && ./autogen.sh && ./configure && 
 sudo make
@@ -38,8 +39,17 @@ sudo dpkg -i lsd_0.23.1_amd64.deb
 rm lsd_0.23.1_amd64.deb
 
 echo "Setting up vim markdown live preview"
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
-sudo apt-get install -y nodejs
+sudo apt-get update
+sudo apt-get install -y ca-certificates curl gnupg
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+
+NODE_MAJOR=20
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+
+sudo apt-get update
+sudo apt-get install nodejs -y
+
 sudo npm install --global yarn
 sudo ln -s /mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe /usr/bin/firefox
 

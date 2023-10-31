@@ -1,3 +1,7 @@
+" Enable syntax highlighting
+syntax on
+filetype on
+
 " Add line numbers
 set number
 
@@ -49,11 +53,17 @@ if &term=~"xterm\\|rxvt"
    " use \003]12;gray\007 for gnome-terminal and rxvt up to version 9.21
 endif
 
-" colorscheme 
-" set termguicolors
-
 " set vim-rainbow
 let g:rainbow_active=1
 
-" set statusline
-set laststatus=2
+" remove statusline
+autocmd BufRead,BufNewFile * set laststatus=0
+set noshowmode 
+
+" python highlighting
+let g:python_highlight_all = 1
+
+" cpp highlighting
+let g:cpp_attributes_highlight = 1
+let g:cpp_member_highlight = 1
+let g:cpp_simple_highlight = 1
