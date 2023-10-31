@@ -21,8 +21,8 @@ augroup END
 
 " Highlight en spaces, em spaces, non-breaking spaces and soft hyphens with
 " a strong red color.
-au BufNewFile,BufReadPost * match ExtraWhitespace /\(\%u2002\|\%u2003\|\%xa0\|\%xad\)/
-highlight ExtraWhitespace ctermbg=red guibg=red
+"au BufNewFile,BufReadPost * match ExtraWhitespace /\(\%u2002\|\%u2003\|\%xa0\|\%xad\)/
+"highlight ExtraWhitespace ctermbg=red guibg=red
 highlight clear SignColumn
 
 " Do not use bells on errors
@@ -61,7 +61,22 @@ autocmd BufRead,BufNewFile * set laststatus=0
 set noshowmode 
 
 " python highlighting
-let g:python_highlight_all = 1
+let g:python_version_2 = 1
+let g:python_highlight_builtins = 1
+let g:python_highlight_builtin_objs  = 1
+let g:python_highlight_builtin_types = 1
+let g:python_highlight_builtin_funcs = 1
+let g:python_highlight_builtin_funcs_kwarg = 1
+let g:python_highlight_exceptions = 1
+let g:python_highlight_string_formatting = 1
+let g:python_highlight_string_format = 1
+let g:python_highlight_string_templates = 1
+let g:python_highlight_indent_errors = 1
+let g:python_highlight_doctests = 1
+let g:python_highlight_func_calls = 1
+let g:python_highlight_class_vars = 1
+let g:python_highlight_operators = 1
+let g:python_highlight_file_headers_as_comments = 1
 
 " cpp highlighting
 let g:cpp_attributes_highlight = 1
