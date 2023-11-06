@@ -9,7 +9,7 @@ BASIC_PACKAGES=(vim git curl zsh)
 echo "Installing basic packages ($BASIC_PACKAGES)"
 sudo apt-get install -y $BASIC_PACKAGES
 
-LATEX_PACKAGES=(latexmk texlive texlive-xetex texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra python3-pygments)
+LATEX_PACKAGES=(latexmk texlive texlive-xetex texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra python3-pygments texlive-science)
 echo "Installing latex packages ($LATEX_PACKAGES)"
 sudo apt-get install -y $LATEX_PACKAGES
 
