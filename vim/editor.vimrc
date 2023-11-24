@@ -6,8 +6,8 @@ filetype indent on
 set mouse=a
 
 " Use spaces instead of tabs
- set expandtab
-
+set expandtab
+    
 " Make tabs be 4 spaces
 set shiftwidth=4
 set tabstop=4

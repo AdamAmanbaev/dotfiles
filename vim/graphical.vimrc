@@ -8,10 +8,6 @@ set number
 " Show current command-inputs
 set showcmd
 
-" Provide some space between cursor and edges
-set scrolloff=2
-set sidescrolloff=5
-
 " Add relative line numbers in cmd-mode
 augroup numbertoggle
     autocmd!
@@ -19,11 +15,8 @@ augroup numbertoggle
     autocmd BufLeave,FocusLost,InsertEnter * set nornu
 augroup END
 
-" Highlight en spaces, em spaces, non-breaking spaces and soft hyphens with
-" a strong red color.
-"au BufNewFile,BufReadPost * match ExtraWhitespace /\(\%u2002\|\%u2003\|\%xa0\|\%xad\)/
-"highlight ExtraWhitespace ctermbg=red guibg=red
-highlight clear SignColumn
+" gitgutter sidebar
+highlight! link SignColumn LineNr
 
 " Do not use bells on errors
 set noerrorbells
@@ -82,3 +75,9 @@ let g:python_highlight_file_headers_as_comments = 1
 let g:cpp_attributes_highlight = 1
 let g:cpp_member_highlight = 1
 let g:cpp_simple_highlight = 1
+
+" dark background
+set bg=dark
+
+" cool line 
+set cul
