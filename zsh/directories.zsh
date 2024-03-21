@@ -14,12 +14,6 @@ alias ls='lsd -lh --group-directories-first'
 alias la='lsd -lah --group-directories-first'
 alias lt='lsd -lh --group-directories-first --tree'
 
-# makes directory and enters it
-function mkcd() {
-	mkdir -p $1
-	cd $1
-}
-
 # colors
 PS1='%F{blue}%~ %(?.%F{green}.%F{red})%#%f '
 

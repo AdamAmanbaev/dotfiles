@@ -21,18 +21,6 @@ PROGRAMMING_PACKAGES=(g++ gcc python3 python3-pip gdb)
 echo "Installing packages ($PROGRAMMING_PACKAGES)"
 sudo apt-get install -y $PROGRAMMING_PACKAGES
 
-echo "Building latest version of ltrace"
-sudo apt-get -y install git autoconf libelf-dev libtool
-sudo rm -rf /tmp/ltrace
-git clone https://gitlab.com/cespedes/ltrace.git /tmp/ltrace
-cd /tmp/ltrace && ./autogen.sh && ./configure && 
-sudo make
-sudo make install
-cd $HOME
-
-echo "Installing gef for gdb"
-bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
-
 echo "Installing lsd"
 wget https://github.com/lsd-rs/lsd/releases/download/0.23.1/lsd_0.23.1_amd64.deb
 sudo dpkg -i lsd_0.23.1_amd64.deb
@@ -67,3 +55,11 @@ sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 sudo apt-get install -y docker-compose
 sudo gpasswd -a $USER docker
+
+echo "Setting up miniconda3"
+mkdir -p ~/.miniconda3
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/.miniconda3/miniconda.sh
+bash ~/.miniconda3/miniconda.sh -b -u -p ~/.miniconda3
+rm -rf ~/.miniconda3/miniconda.sh
+~/.miniconda3/bin/conda init zsh
+conda config --set auto_activate_base false
