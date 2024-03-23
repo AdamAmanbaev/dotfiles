@@ -25,3 +25,6 @@ alias exp='/mnt/c/WINDOWS/explorer.exe'
 
 # live markdown
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# nvidia-smi
+export PATH=$PATH:/usr/lib/wsl/lib/
