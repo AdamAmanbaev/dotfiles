@@ -25,3 +25,7 @@ touch $HOME/.hushlogin
 
 chmod +x $HOME/Code/cp/library/stress/validate.zsh
 chmod +x $HOME/Code/cp/library/stress/stress.zsh
+
+# Final setup of conda
+~/.miniconda3/bin/conda init zsh
+echo "Restart shell and run conda config --set auto_activate_base false, and restart again"

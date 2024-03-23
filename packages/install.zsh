@@ -61,8 +61,6 @@ mkdir -p ~/.miniconda3
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/.miniconda3/miniconda.sh
 bash ~/.miniconda3/miniconda.sh -b -u -p ~/.miniconda3
 rm -rf ~/.miniconda3/miniconda.sh
-~/.miniconda3/bin/conda init zsh
-conda config --set auto_activate_base false
 
 echo "Setting up cuda support"
 sudo apt-key del 7fa2af80
@@ -73,4 +71,4 @@ sudo dpkg -i cuda-repo-wsl-ubuntu-12-4-local_12.4.0-1_amd64.deb
 sudo cp /var/cuda-repo-wsl-ubuntu-12-4-local/cuda-*-keyring.gpg /usr/share/keyrings/
 sudo apt-get update
 sudo apt-get -y install cuda-toolkit-12-4
-
+rm cuda-repo-wsl-ubuntu-12-4-local_12.4.0-1_amd64.deb

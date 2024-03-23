@@ -1,1 +1,1 @@
-ln -s $HOME/Code/dotfiles/tmux/tmux.conf ~/.tmux.conf
+ln -sf $HOME/Code/dotfiles/tmux/tmux.conf ~/.tmux.conf
