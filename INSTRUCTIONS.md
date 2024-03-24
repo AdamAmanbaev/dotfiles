@@ -6,8 +6,8 @@ sudo usermod -aG sudo <username>
 
 sudo apt install vim git zsh -y
 
-[//]: # add "su - <username>" to .zshrc
-exec zsh
+[//]: # add "su - <username>" to .bashrc
+exec sh
 
 ssh-keygen -t ed25519 -C <github e-mail>
 [//]: # add key to github account
