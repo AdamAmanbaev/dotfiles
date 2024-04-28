@@ -12,4 +12,5 @@ Plug 'frazrepo/vim-rainbow'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'tpope/vim-markdown'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+Plug 'roxma/vim-tmux-clipboard'
 call plug#end()
