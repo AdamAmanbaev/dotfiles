@@ -4,7 +4,7 @@ set -e
 INSTALL_PATH=$(dirname -- "$0:A")
 
 MODULES=(packages tmux zsh vim)
-REPOS=(latex ctf cp)
+REPOS=(latex ctf cp_priv)
 
 function install() {
     echo "Installing module $1"
