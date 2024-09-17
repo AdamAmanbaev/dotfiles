@@ -28,3 +28,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # nvidia-smi
 export PATH=$PATH:/usr/lib/wsl/lib/
+
+# CUDA
+export PATH=/usr/local/cuda-12.6/bin${PATH:+:${PATH}}

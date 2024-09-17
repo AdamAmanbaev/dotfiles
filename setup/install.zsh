@@ -4,7 +4,7 @@ set -e
 INSTALL_PATH=$(dirname -- "$0:A")
 
 MODULES=(packages tmux zsh vim)
-REPOS=(latex ctf cp_priv)
+REPOS=(latex ctf cp)
 
 function install() {
     echo "Installing module $1"
@@ -29,3 +29,17 @@ chmod +x $HOME/Code/cp/library/stress/stress.zsh
 # Final setup of conda
 ~/.miniconda3/bin/conda init zsh
 echo "Restart shell and run conda config --set auto_activate_base false, and restart again"
+
+# Ask if CUDA should be set up
+read "response?Do you want to set up CUDA? [y]/n: "
+if [[ -z "$response" || "$response" =~ ^[Yy]$ ]]; then
+    echo "Setting up CUDA"
+    wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
+    sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600
+    wget https://developer.download.nvidia.com/compute/cuda/12.6.1/local_installers/cuda-repo-wsl-ubuntu-12-6-local_12.6.1-1_amd64.deb
+    sudo dpkg -i cuda-repo-wsl-ubuntu-12-6-local_12.6.1-1_amd64.deb
+    sudo cp /var/cuda-repo-wsl-ubuntu-12-6-local/cuda-*-keyring.gpg /usr/share/keyrings/
+    sudo apt-get update
+    sudo apt-get -y install cuda-toolkit-12-6
+    sudo apt install nvidia-cuda-toolkit
+fi
