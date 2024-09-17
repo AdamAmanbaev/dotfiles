@@ -1,10 +1,5 @@
 #!/usr/bin/zsh
 
-usage() {
-    echo "Usage: $0 [--cuda|-c]"
-    exit 1
-}
-
 cuda=false
 while [[ $# -gt 0 ]]; do
     case $1 in
