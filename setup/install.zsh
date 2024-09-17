@@ -1,5 +1,23 @@
 #!/usr/bin/zsh
 
+usage() {
+    echo "Usage: $0 [--cuda|-c]"
+    exit 1
+}
+
+cuda=false
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        --cuda|c)
+            cuda=true
+            shift
+            ;;
+        *)
+            usage
+            ;;
+    esac
+done
+
 set -e
 INSTALL_PATH=$(dirname -- "$0:A")
 
@@ -31,8 +49,7 @@ chmod +x $HOME/Code/cp/library/stress/stress.zsh
 echo "Restart shell and run conda config --set auto_activate_base false, and restart again"
 
 # Ask if CUDA should be set up
-read "response?Do you want to set up CUDA? [y]/n: "
-if [[ -z "$response" || "$response" =~ ^[Yy]$ ]]; then
+if [[ "$cuda" == true ]]; then
     echo "Setting up CUDA"
     wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin
     sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600
