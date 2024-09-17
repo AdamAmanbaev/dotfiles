@@ -13,7 +13,7 @@ LATEX_PACKAGES=(latexmk texlive texlive-xetex texlive-fonts-recommended texlive-
 echo "Installing latex packages ($LATEX_PACKAGES)"
 sudo apt-get install -y $LATEX_PACKAGES
 
-GENERAL_PACKAGES=(fzf tmux)
+GENERAL_PACKAGES=(fzf tmux htop)
 echo "Installing general packages ($GENERAL_PACKAGES)"
 sudo apt-get install -y $GENERAL_PACKAGES
  
