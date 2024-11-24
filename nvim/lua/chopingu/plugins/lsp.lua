@@ -86,6 +86,7 @@ local mason_lspconf = require("mason-lspconfig")
 mason_lspconf.setup({
     ensure_installed = {
         "lua_ls",
+        "basedpyright",
     },
     handlers = {
         lsp_zero.default_setup,
