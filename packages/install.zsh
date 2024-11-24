@@ -5,9 +5,15 @@ sudo apt-get update
 git config --global user.email "adam.amanbaev@gmail.com"
 git config --global user.name "Adam Amanbaev"
 
-BASIC_PACKAGES=(vim git curl zsh)
+BASIC_PACKAGES=(git curl zsh)
 echo "Installing basic packages ($BASIC_PACKAGES)"
 sudo apt-get install -y $BASIC_PACKAGES
+
+echo "Setting up neovim"
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux64.tar.gz
+rm nvim-linux64.tar.gz
 
 LATEX_PACKAGES=(latexmk texlive texlive-xetex texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra python3-pygments texlive-science)
 echo "Installing latex packages ($LATEX_PACKAGES)"
@@ -21,25 +27,17 @@ PROGRAMMING_PACKAGES=(g++ gcc python3 python3-pip gdb)
 echo "Installing packages ($PROGRAMMING_PACKAGES)"
 sudo apt-get install -y $PROGRAMMING_PACKAGES
 
+echo "Setting up rust nightly"
+curl https://sh.rustup.rs -sSf | sh -s -- -y
+rustup toolchain install nightly
+
+echo "Setting up deno"
+curl -fsSL https://deno.land/install.sh | sh -s -- -y
+
 echo "Installing lsd"
 wget https://github.com/lsd-rs/lsd/releases/download/0.23.1/lsd_0.23.1_amd64.deb
 sudo dpkg -i lsd_0.23.1_amd64.deb
 rm lsd_0.23.1_amd64.deb
-
-echo "Setting up vim markdown live preview"
-sudo apt-get update
-sudo apt-get install -y ca-certificates curl gnupg
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-
-NODE_MAJOR=20
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-
-sudo apt-get update
-sudo apt-get install nodejs -y
-
-sudo npm install --global yarn
-sudo ln -sf /mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe /usr/bin/firefox
 
 echo "Setting up docker"
 sudo apt-get update
@@ -55,6 +53,11 @@ sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 sudo apt-get install -y docker-compose
 sudo gpasswd -a $USER docker
+
+echo "Setting up ripgrep"
+curl -LO https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep_14.1.0-1_amd64.deb
+sudo dpkg -i ripgrep_14.1.0-1_amd64.deb
+rm ripgrep_14.1.0-1_amd64.deb
 
 echo "Setting up miniconda3"
 mkdir -p ~/.miniconda3

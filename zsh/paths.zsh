@@ -31,3 +31,6 @@ export PATH=$PATH:/usr/lib/wsl/lib/
 
 # CUDA
 export PATH=/usr/local/cuda-12.6/bin${PATH:+:${PATH}}
+
+# neovim
+export PATH="$PATH:/opt/nvim-linux64/bin"

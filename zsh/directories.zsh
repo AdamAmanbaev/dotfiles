@@ -15,7 +15,7 @@ alias la='lsd -lah --group-directories-first'
 alias lt='lsd -lh --group-directories-first --tree'
 
 # colors
-PS1='%F{blue}%~ %(?.%F{green}.%F{red})%#%f '
+PS1='%F{green}%~ %(?.%F{green}.%F{red})%#%f '
 
 # find any directory and enter it
 fd() {

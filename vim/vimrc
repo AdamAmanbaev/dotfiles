@@ -1,8 +1,0 @@
-" Dont be vim compatible
-set nocompatible
-
-source ~/Code/dotfiles/vim/plugins.vimrc
-source ~/Code/dotfiles/vim/mappings.vimrc
-source ~/Code/dotfiles/vim/editor.vimrc
-source ~/Code/dotfiles/vim/graphical.vimrc
-source ~/Code/dotfiles/vim/search.vimrc

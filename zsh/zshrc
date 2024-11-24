@@ -8,3 +8,4 @@ source $ZSHFILES/directories.zsh
 source $ZSHFILES/history.zsh
 source $ZSHFILES/keybinds.zsh
 source $ZSHFILES/paths.zsh
+. "/home/chopingu/.deno/env"
