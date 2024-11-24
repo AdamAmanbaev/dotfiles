@@ -36,4 +36,16 @@ vim.opt.history = 1000
 vim.opt.autoread = true
 
 -- Windows clipboard
-vim.opt.clipboard = "unnamedplus"
+local clip = '/mnt/c/Windows/System32/clip.exe'
+
+if vim.fn.executable(clip) == 1 then
+    vim.api.nvim_create_augroup('WSLYank', { clear = true })
+    vim.api.nvim_create_autocmd('TextYankPost', {
+        group = 'WSLYank',
+        callback = function()
+            if vim.v.event.operator == 'y' then
+                vim.fn.system(clip, vim.fn.getreg('"'))
+            end
+        end,
+    })
+end
