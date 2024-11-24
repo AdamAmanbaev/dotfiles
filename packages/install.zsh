@@ -26,6 +26,7 @@ sudo apt-get install -y $GENERAL_PACKAGES
 PROGRAMMING_PACKAGES=(g++ gcc python3 python3-pip gdb)
 echo "Installing packages ($PROGRAMMING_PACKAGES)"
 sudo apt-get install -y $PROGRAMMING_PACKAGES
+sudo apt install python3.12-venv
 
 echo "Setting up rust nightly"
 curl https://sh.rustup.rs -sSf | sh -s -- -y

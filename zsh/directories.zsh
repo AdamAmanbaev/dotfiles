@@ -14,6 +14,9 @@ alias ls='lsd -lh --group-directories-first'
 alias la='lsd -lah --group-directories-first'
 alias lt='lsd -lh --group-directories-first --tree'
 
+# neovim as default
+alias vim='nvim'
+
 # colors
 PS1='%F{green}%~ %(?.%F{green}.%F{red})%#%f '
 
