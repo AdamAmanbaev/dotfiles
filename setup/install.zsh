@@ -1,10 +1,15 @@
 #!/usr/bin/zsh
 
+usage() {
+    echo "Usage: $0 [--cuda|-c]"
+    exit 1
+}
+
 # read CUDA flag
 cuda=false
 while [[ $# -gt 0 ]]; do
     case $1 in
-        --cuda|c)
+        --cuda|-c)
             cuda=true
             shift
             ;;
@@ -56,4 +61,4 @@ fi
 
 # Final setup of conda
 ~/.miniconda3/bin/conda init zsh
-echo "Restart shell and run conda config --set auto_activate_base false, and restart again"
+echo "Restart shell and run <conda config --set auto_activate_base false>, and restart again.\nFurthermore, run <rustup toolchain install nightly>"
