@@ -7,7 +7,7 @@ sudo usermod -aG sudo <username>
 [//]: # add "su - <username>" to .bashrc using nano
 exec sh
 
-sudo apt install vim git zsh -y
+sudo apt install git zsh -y
 
 ssh-keygen -t ed25519 -C <github e-mail>
 [//]: # add key to github account
