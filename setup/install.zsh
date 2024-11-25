@@ -22,7 +22,7 @@ done
 set -e
 INSTALL_PATH=$(dirname -- "$0:A")
 
-MODULES=(packages tmux zsh nvim conda)
+MODULES=(packages tmux zsh nvim)
 REPOS=(latex cp)
 
 function install() {
@@ -59,6 +59,8 @@ if [[ "$cuda" == true ]]; then
     rm cuda-repo-wsl-ubuntu-12-6-local_12.6.1-1_amd64.deb
 fi
 
+sudo chmod +x $HOME/Code/dotfiles/setup/install2.zsh
+
 # Final setup of conda
 ~/.miniconda3/bin/conda init zsh
-echo "Restart shell and run <conda config --set auto_activate_base false>, and restart again.\nFurthermore, run <rustup toolchain install nightly>"
+echo "Restart shell and run $HOME/Code/dotfiles/setup/install2.zsh"
