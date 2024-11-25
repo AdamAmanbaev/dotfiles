@@ -22,7 +22,7 @@ done
 set -e
 INSTALL_PATH=$(dirname -- "$0:A")
 
-MODULES=(packages tmux zsh nvim)
+MODULES=(packages tmux zsh nvim conda)
 REPOS=(latex cp)
 
 function install() {
