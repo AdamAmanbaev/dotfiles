@@ -3,7 +3,7 @@ export PATH=$PATH:/mnt/c/users/adama/AppData/Local/SumatraPDF/
 alias sumatrapdf='SumatraPDF.exe'
 
 # stress-testing scripts
-export PATH=$PATH:~/Code/cp/library/stress
+export PATH=$PATH:~/Code/competitive_programming/library/stress
 
 # exprt colors to tmux
 export TERM="xterm-256color"

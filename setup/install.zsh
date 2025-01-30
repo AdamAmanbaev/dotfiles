@@ -18,7 +18,7 @@ set -e
 INSTALL_PATH=$(dirname -- "$0:A")
 
 MODULES=(packages tmux zsh nvim)
-REPOS=(latex cp)
+REPOS=(latex competitive_programming)
 
 function install() {
     echo "Installing module $1"
@@ -37,8 +37,8 @@ source $INSTALL_PATH/../repos/install.zsh
 mkdir -p $HOME/.hushlogin
 touch $HOME/.hushlogin
 
-chmod +x $HOME/Code/cp/library/stress/validate.zsh
-chmod +x $HOME/Code/cp/library/stress/stress.zsh
+chmod +x $HOME/Code/competitive_programming/library/stress/validate.zsh
+chmod +x $HOME/Code/competitive_programming/library/stress/stress.zsh
 
 # CUDA setup
 if [[ "$cuda" == true ]]; then

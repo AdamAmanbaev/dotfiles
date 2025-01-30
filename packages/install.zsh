@@ -19,9 +19,13 @@ LATEX_PACKAGES=(latexmk texlive texlive-xetex texlive-fonts-recommended texlive-
 echo "Installing latex packages ($LATEX_PACKAGES)"
 sudo apt-get install -y $LATEX_PACKAGES
 
-GENERAL_PACKAGES=(fzf tmux htop)
+GENERAL_PACKAGES=(tmux htop)
 echo "Installing general packages ($GENERAL_PACKAGES)"
 sudo apt-get install -y $GENERAL_PACKAGES
+
+echo "Installing fzf"
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
  
 PROGRAMMING_PACKAGES=(g++ gcc python3 python3-pip gdb)
 echo "Installing packages ($PROGRAMMING_PACKAGES)"
@@ -60,8 +64,13 @@ curl -LO https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep_
 sudo dpkg -i ripgrep_14.1.0-1_amd64.deb
 rm ripgrep_14.1.0-1_amd64.deb
 
+echo "Tree-sitter CLI"
+npm install -g tree-sitter-cli
+
 echo "Setting up miniconda3"
 mkdir -p ~/.miniconda3
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/.miniconda3/miniconda.sh
 bash ~/.miniconda3/miniconda.sh -b -u -p ~/.miniconda3
 rm -rf ~/.miniconda3/miniconda.sh
+
+

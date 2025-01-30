@@ -8,8 +8,12 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 -- Indendation
+vim.opt.autoindent = true
 vim.opt.smartindent = true
-vim.opt.cino = 'n-sg0'
+--vim.opt.cino = "n-sg0"
+
+-- Wrap
+vim.opt.wrap = true
 
 -- Disable backups and swaps
 vim.opt.swapfile = false
@@ -36,16 +40,16 @@ vim.opt.history = 1000
 vim.opt.autoread = true
 
 -- Windows clipboard
-local clip = '/mnt/c/Windows/System32/clip.exe'
+local clip = "/mnt/c/Windows/System32/clip.exe"
 
 if vim.fn.executable(clip) == 1 then
-    vim.api.nvim_create_augroup('WSLYank', { clear = true })
-    vim.api.nvim_create_autocmd('TextYankPost', {
-        group = 'WSLYank',
-        callback = function()
-            if vim.v.event.operator == 'y' then
-                vim.fn.system(clip, vim.fn.getreg('"'))
-            end
-        end,
-    })
+	vim.api.nvim_create_augroup("WSLYank", { clear = true })
+	vim.api.nvim_create_autocmd("TextYankPost", {
+		group = "WSLYank",
+		callback = function()
+			if vim.v.event.operator == "y" then
+				vim.fn.system(clip, vim.fn.getreg('"'))
+			end
+		end,
+	})
 end

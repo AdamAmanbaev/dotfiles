@@ -22,51 +22,51 @@ vim.keymap.set("n", "<C-L>", "<C-W>l")
 
 -- For compiling C++ files
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "cpp",
-    callback = function()
-        vim.keymap.set("n", "<F8>", function()
-            vim.cmd("write") -- Save the file
-            local cmd = string.format(
-                [[wt.exe cmd /t:0A /c "wsl -u %s --cd %s -e g++ -DDEBUG -std=c++20 %s -o %s"]],
-                os.getenv("USER"),
-                vim.fn.expand("%:p:h"),
-                vim.fn.expand("%:p"),
-                vim.fn.expand("%:r")
-            )
-            vim.fn.system(cmd) -- Execute the command
-        end, { buffer = true })
-    end
+	pattern = "cpp",
+	callback = function()
+		vim.keymap.set("n", "<F8>", function()
+			vim.cmd("write") -- Save the file
+			local cmd = string.format(
+				[[wt.exe cmd /t:0A /c "wsl -u %s --cd %s -e g++ -DDEBUG -std=c++20 -g %s -o %s"]],
+				os.getenv("USER"),
+				vim.fn.expand("%:p:h"),
+				vim.fn.expand("%:p"),
+				vim.fn.expand("%:r")
+			)
+			vim.fn.system(cmd) -- Execute the command
+		end, { buffer = true })
+	end,
 })
 
 -- For running C++ files
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "cpp",
-    callback = function()
-        vim.keymap.set("n", "<F9>", function()
-            local cmd = string.format(
-                [[wt.exe cmd /t:0A /k "wsl -u %s --cd %s -e ./%s"]],
-                os.getenv("USER"),
-                vim.fn.expand("%:p:h"),
-                vim.fn.expand("%:r")
-            )
-            vim.fn.system(cmd) -- Execute the command
-        end, { buffer = true })
-    end
+	pattern = "cpp",
+	callback = function()
+		vim.keymap.set("n", "<F9>", function()
+			local cmd = string.format(
+				[[wt.exe cmd /t:0A /k "wsl -u %s --cd %s -e ./%s"]],
+				os.getenv("USER"),
+				vim.fn.expand("%:p:h"),
+				vim.fn.expand("%:r")
+			)
+			vim.fn.system(cmd) -- Execute the command
+		end, { buffer = true })
+	end,
 })
 
 -- For running Python files
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = "python",
-    callback = function()
-        vim.keymap.set("n", "<F9>", function()
-            vim.cmd("write") -- Save the file
-            local cmd = string.format(
-                [[wt.exe cmd /t:0A /k "wsl -u %s --cd %s -e python3 %s"]],
-                os.getenv("USER"),
-                vim.fn.expand("%:p:h"),
-                vim.fn.expand("%:p")
-            )
-            vim.fn.system(cmd) -- Execute the command
-        end, { buffer = true })
-    end
+	pattern = "python",
+	callback = function()
+		vim.keymap.set("n", "<F9>", function()
+			vim.cmd("write") -- Save the file
+			local cmd = string.format(
+				[[wt.exe cmd /t:0A /k "wsl -u %s --cd %s -e python3 %s"]],
+				os.getenv("USER"),
+				vim.fn.expand("%:p:h"),
+				vim.fn.expand("%:p")
+			)
+			vim.fn.system(cmd) -- Execute the command
+		end, { buffer = true })
+	end,
 })
