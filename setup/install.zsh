@@ -1,10 +1,15 @@
 #!/usr/bin/zsh
 
+usage() {
+    echo "Usage: $0 [--cuda|-c]"
+    exit 1
+}
+
 # read CUDA flag
 cuda=false
 while [[ $# -gt 0 ]]; do
     case $1 in
-        --cuda|c)
+        --cuda|-c)
             cuda=true
             shift
             ;;
@@ -54,6 +59,8 @@ if [[ "$cuda" == true ]]; then
     rm cuda-repo-wsl-ubuntu-12-6-local_12.6.1-1_amd64.deb
 fi
 
+sudo chmod +x $HOME/Code/dotfiles/setup/install2.zsh
+
 # Final setup of conda
 ~/.miniconda3/bin/conda init zsh
-echo "Restart shell and run conda config --set auto_activate_base false, and restart again"
+echo "Restart shell and run $HOME/Code/dotfiles/setup/install2.zsh"
